@@ -313,7 +313,6 @@ sub _searchiTunesMac {
 
 sub _openiTunes {
 	my $failure;
-	my $iTunesVersion;
 
 	unless ($iTunesHandle) {
 		iTunesUpdateMsg ("Attempting to make connection to iTunes...\n");
