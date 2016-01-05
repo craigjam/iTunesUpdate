@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.4.3: 19th December 2007
+	v2.4.4: 9 March 2007
 
 James Craig (james.craig@london.com)
 
@@ -11,38 +11,42 @@ iTunes Update is a SlimServer plug-in to update your iTunes database with Slimse
 Features:
 =========
 
-- When a track is determined to have been 'played', the iTunes playcount and last played fields are updated.
+* Updating of iTunes play count, skip count, last played & last skipped fields
+ - When a track is determined to have been 'played', the iTunes playcount and last played fields are updated.
 
-This is decided by 3 variables - minimum listen time (default 5s), percentage listen time (default 50%) and maximum listen time (default 15 minutes). These settings can be modified in the iTunesUpdate.pm code.
-For some reason (buffering perhaps) it's very unlikely that a full 100% of time is ever registered, so don't set the % too high (This is particularly noticable on very short tracks).
+This is decided by 3 variables - minimum listen time (default 5s), percentage listen time (default 50%) and maximum listen time (default 15 minutes). If necessary, these settings can be modified in the iTunesUpdate.pm code. For some reason (buffering perhaps) it's very unlikely that a full 100% of time is ever registered, so don't set the % too high (This is particularly noticable on very short tracks).
 
-- If a track is not counted as played, the iTunes skipped count and last skipped fields are updated.
-Situations that are not considered to be skipping:
- * stopping playback in the middle of a song
- * switching player off
- * changing tracks while paused
+ - If a track is not counted as played, the iTunes skipped count and last skipped fields are updated.
+  Situations that are not considered to be skipping:
+ 	- stopping playback in the middle of a song
+ 	- switching player off
+ 	- changing tracks while paused
 
-- iTunes rating from SlimServer
+* Set iTunes rating from SlimServer
+
+When the current track finishes playing the rating will be written to iTunes (even if the play count isn't changed). Tracks can be re-rated as many times as you like before they're written to iTunes.
 There are two rating schemes:
-a) full stars: use keys 0-5 on the remote (default)
+a) full stars: use keys 0-5 on the remote (default setting)
 b) half stars: use keys 0-9 and 'add' for 10. (enable this mode from the Plugin settings page.)
 
-When in the iTunesUpdate menu the remote can be used to set a rating for the track currently playing (0 being no stars in iTunes).
-Hold down the desired number until a message appears on the player's screen. When the current track finishes playing the rating will be written to iTunes (even if it wasn't listened to long enough to qualify as a 'play'). Tracks can be re-rated as many times as you like before they're written to iTunes.
+Rating from the SlimServer web page and Controller menus is done directly from the iTunesUpdate page or menu.
+On SlimDevices players with displays, when in the iTunesUpdate menu the remote can be used to set a rating for the track currently playing (0 being no stars in iTunes) - Hold down the desired number until a message appears on the player's screen.
+
 Rating should also work from the 'now playing' menu but this can be affected by other plugins registering the same keys.
 To force rating from any player menus you will need to add a custom remote map. You'll find two example files in the iTunesUpdate plugin directory - CustomStars.map for normal ratings and CustomHalfStars.map for half-star rating. If you don't have a custom IR map, move the file you want to the IR directory (at the same level as Plugins in the SlimServer installation) and select the map file from Player Settings->Remote in the web interface. If you already have a custom map, copy the commands you want from my files to yours. 
 
-- Save SlimServer playlists to iTunes
+* Save SlimServer current playlist to iTunes
 
-When in the iTunes Update menu (or 'now playing' screen, with notes as above) holding down the play key will write the current client playlist to iTunes.
-It will be named the same as the client and appended with the current date and time. 
+The current playlist can be saved to iTunes directly from the web interface or Controller menus.
+When in the iTunes Update menu (or 'now playing' screen, with notes as above) on a SqueezeBox holding down the play key will write the current client playlist to iTunes.
+It will have the the same as current player with the current date and time added. 
 This can take a while so be careful not to activate this multiple times!
   
-- iTunes info displayed in menu
-While playing music navigate to the iTunes Update menu on your Squeezebox and the iTunes info for the current song will be displayed.
+* iTunes info displayed in SqueezeCenter interface
+While playing music navigate to the iTunes Update menu on your Squeezebox or Controller or the web interface and the iTunes info for the current song will be displayed.
 
-- iTunes info displayed in web interface
-The iTunes Update page is accessed from the home page under the plugins section. You can see the iTunes info here and alter the current track rating. Downloaded iTunes artwork is shown here on Windows. 
+* import iTunes Downloaded Artwork into SqueezeCentre (Windows only)
+As tracks are added to any SqueezeCentre player's current playlist, iTunes Update will copy any Downloaded Album artwork into SqueezeCentre. Artwork is saved for seven days.
 
 Notes
 =====
@@ -78,13 +82,12 @@ Notes
 Installation
 ==============
 
-1 Put iTunesUpdate directory (including subdirs) into the Plugins directory.
-
-Windows Only: If you wish to use 'direct access' do not run SlimServer as a service/from the SlimTray app.
+Windows Only: 
+If you wish to use 'direct access' do not run SlimServer as a service/from the SlimTray app.
  See instructions on my web page for making this change.
 
 Mac Only:
-a) Install Perl modules Mac::Applescript::Glue;
+Install Perl modules Mac::Applescript::Glue;
 	To install from CPAN in the default directory.
 	At the comand line enter:
 	sudo perl -MCPAN -e shell
@@ -96,18 +99,11 @@ a) Install Perl modules Mac::Applescript::Glue;
 	If tests fail, you need to force the installation:
 	force install Mac::AppleScript::Glue
 
-b) You may find that the plugin does not appear at all in SlimServer. If this is the case it needs to be installed in an alternate location; Rather than [USERNAME]/Library/SlimDevices/Plugins/ try putting the Plugin directory in /Library/PreferencePanes/SlimServer.prefPane/Contents/server/Plugins
-
-
-c) SlimServer 5/6.1 only: (before 16 August 2005) Follow the instructions below to remove the --daemon parameter from them to solve this. Later versions of SlimServer have fixed this problem.
-	You need to stop the server and edit 2 files.
-
-	The first is : "/Library/PreferencePanes/SlimServer.prefPane/Contents/resources/Start Slim Server.sh"
-	The second is: "/Library/PreferencePanes/SlimServer.prefPane/Contents/Server/SlimLauncher.app/Contents/resources/Start Slim Server.sh"
-
-	Both files are identical and in each case about 1/2 to 2/3 thru the file is the commandline startup of the
-slimserver. just delete the --daemon part and save.
-
+1: Put iTunesUpdate directory (including subdirs) into the Plugins directory.
+On the Mac the plugin needs to be installed in 
+~user/Library/Application Support/Squeeze Center/Plugins (if SC7 is installed for just one user)
+or
+/Library/Application Support/Squeeze Center/Plugins (if installed for all users)
 
 2: restart SlimServer.
 
@@ -144,7 +140,10 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
-v2.4.3  - Fix crash on Jive menu (currently not working)
+v2.4.4  - Jive menu added
+	- custom icon added
+	- fix on-screen messages
+v2.4.3  - Fix crash on Jive menu
 v2.4.2  - Fix version check in update script
 v2.4.1  - Fix bug saving unset rating to update file
 v2.4.0  - Jive menus added
