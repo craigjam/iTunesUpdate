@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.1.3 : 22nd November 2007
+	v2.2.0 : 28th September 2007
 
 James Craig (james.craig@london.com)
 
@@ -144,8 +144,7 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
-v2.1.4  - fix iTunes Version check in update script
-v2.1.3  - don't save rating to file if not set by user
+v2.2.0	- Upgrade for SqueezeCenter 7.0
 v2.1.2  - fix the ignore filetype option
 v2.1.1	- note whether the user actually rated the track
 v2.1.0  - display iTunes downloaded album artwork on Windows/Direct Update

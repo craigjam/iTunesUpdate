@@ -1,0 +1,31 @@
+[% PROCESS settings/header.html %]
+
+	<div class="settingSection">
+		<div class="groupHead">[% "PLUGIN_ITUNES_UPDATER" | string | upper %]</div>
+		<div class="groupDesc">[% "PLUGIN_ITUNES_UPDATE_SETUP_GROUP_DESC" | string %]</div>
+	</div>
+
+	<div class="settingSection">
+		<div class="prefHead">[% "PLUGIN_ITUNES_UPDATER_DIRECT_UPDATE" | string | upper %]</div>
+		<div class="prefDesc">[% "PLUGIN_ITUNES_UPDATER_DIRECT_UPDATE_DESC" | string %]</div>
+		<input type="checkbox" [% IF prefs.directupdate %]checked [% END %] class="stdedit" name="directupdate" id="directupdate" />
+	</div>
+	<div class="settingSection">
+		<div class="prefHead">[% "PLUGIN_ITUNES_UPDATER_SET_ARTWORK" | string | upper %]</div>
+		<input type="checkbox" [% IF prefs.set_artwork %]checked [% END %] class="stdedit" name="set_artwork" id="set_artwork" />
+	</div>
+
+	<div class="settingSection">
+		<div class="prefHead">[% "PLUGIN_ITUNES_UPDATER_IGNORE_FILETYPE" | string | upper %]</div>
+		<div class="prefDesc">[% "PLUGIN_ITUNES_UPDATER_IGNORE_FILETYPE_DESC" | string %]</div>
+		<input type="checkbox" [% IF prefs.ignore_filetype %]checked [% END %] class="stdedit" name="ignore_filetype" id="ignore_filetype" />
+	</div>
+
+	</div>
+	<div class="settingSection">
+		<div class="prefHead">[% "PLUGIN_ITUNES_UPDATER_HALF_STAR" | string | upper %]</div>
+		<div class="prefDesc">[% "PLUGIN_ITUNES_UPDATER_HALF_STAR_DESC" | string %]</div>
+		<input type="checkbox" [% IF prefs.halfstar %]checked [% END %] class="stdedit" name="halfstar" id="halfstar" />
+	</div>
+
+[% PROCESS settings/footer.html %]

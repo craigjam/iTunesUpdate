@@ -172,8 +172,6 @@ sub _logTrackToiTunes($%)
 				if ($data{playedDate} gt $skippedDate->Date("yyyyMMdd").$skippedDate->Time("HHmmss")) {
 					$status = $trackHandle->{skippedDate} = $newPlayedDate;
 					#iTunesUpdateMsg("Modified skippedDate\n");
-				} else {
-					iTunesUpdateMsg("skippedDate in iTunes is later than in file!\n");
 				}
 			} elsif ($os eq 'mac') {
 				my $newPlayedDate = "$day $monthHash{$month} $year $hr:$min:$sec";
@@ -187,8 +185,6 @@ sub _logTrackToiTunes($%)
 				$trackHandle->set(skipped_date => \"date \"$newPlayedDate\"");
 			}
 
-		} else {
-			iTunesUpdateMsg("Unhandled combination? $action on $iTunesVersion!\n");
 		}
 		if ($data{rating} ne "") {
 			iTunesUpdateMsg("Updating rating in iTunes to $data{rating}\n");
@@ -313,6 +309,7 @@ sub _searchiTunesMac {
 
 sub _openiTunes {
 	my $failure;
+	my $iTunesVersion;
 
 	unless ($iTunesHandle) {
 		iTunesUpdateMsg ("Attempting to make connection to iTunes...\n");

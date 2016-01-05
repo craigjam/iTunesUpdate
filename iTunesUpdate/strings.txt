@@ -1,0 +1,68 @@
+PLUGIN_ITUNES_UPDATER
+	EN	iTunes Update
+
+PLUGIN_ITUNES_UPDATER_DESC
+	EN	iTunes Update allows you to update your iTunes library with listening and rating data from SlimServer
+
+PLUGIN_ITUNES_UPDATER_ACTIVATED
+	EN	iTunes Update Activated...
+
+PLUGIN_ITUNES_UPDATER_NOTACTIVATED
+	EN	iTunes Update Not Activated...
+
+PLUGIN_ITUNES_UPDATER_HIT_PLAY_TO_START
+	EN	Hit play to start iTunes Updates from this player...
+
+PLUGIN_ITUNES_UPDATER_HIT_PLAY_TO_STOP
+	EN	Hit play to stop iTunes Updates from this player...
+
+PLUGIN_ITUNES_UPDATER_RATING
+	EN	iTunes Rating
+
+PLUGIN_ITUNES_UPDATER_LAST_PLAYED
+	EN	iTunes Last Played
+
+PLUGIN_ITUNES_UPDATER_PLAY_COUNT
+	EN	iTunes Play Count
+
+PLUGIN_ITUNES_UPDATER_LAST_SKIPPED
+	EN	iTunes Last Skipped
+
+PLUGIN_ITUNES_UPDATER_SKIP_COUNT
+	EN	iTunes Skip Count
+
+PLUGIN_ITUNES_UPDATER_SAVE_PLAYLIST
+	EN	Save playlist to iTunes
+
+PLUGIN_ITUNES_UPDATER_SAVED_PLAYLIST
+	EN	Saving playlist to iTunes...
+
+PLUGIN_ITUNES_UPDATER_NO_TRACK
+	EN	Nothing being played!
+
+PLUGIN_ITUNES_UPDATER_NOT_FOUND
+	EN	Current track not found in iTunes!
+
+PLUGIN_ITUNES_UPDATE_SETUP_GROUP_DESC
+	EN	Choose your settings for the iTunes Update plugin.
+
+PLUGIN_ITUNES_UPDATER_DIRECT_UPDATE
+	EN	Direct Update
+
+PLUGIN_ITUNES_UPDATER_DIRECT_UPDATE_DESC
+	EN	Whether the iTunes Update plugin will update the iTunes database directly or save information to a history file for later processing. Set this to "off" if you have SlimServer running as a service (e.g. selected "start automatically" at installation) or are not running this SlimServer on Windows.
+
+PLUGIN_ITUNES_UPDATER_IGNORE_FILETYPE
+	EN	Ignore filetype
+
+PLUGIN_ITUNES_UPDATER_IGNORE_FILETYPE_DESC
+	EN	Update all matching tracks in iTunes, even if they have a different filetype from those in SlimServer
+
+PLUGIN_ITUNES_UPDATER_HALF_STAR
+	EN	Half stars
+
+PLUGIN_ITUNES_UPDATER_HALF_STAR_DESC
+	EN	Allow half stars via remote (use buttons 0-9 & ADD=10). Otherwise use buttons 0 - 5 for ratings.
+
+PLUGIN_ITUNES_UPDATER_SET_ARTWORK
+	EN	Use iTunes downloaded album artwork in SlimServer
