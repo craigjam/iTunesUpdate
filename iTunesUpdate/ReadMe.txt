@@ -83,11 +83,11 @@ Installation
 ==============
 
 Windows Only: 
-If you wish to use 'direct access' do not run SlimServer as a service/from the SlimTray app.
- See instructions on my web page for making this change.
+If you wish to use 'direct access' mode, make sure that SlimServer is configured to 'start on login' from the SlimServer tray icon.
 
 Mac Only:
-Install Perl modules Mac::Applescript::Glue;
+1. Install 'Developer Tools' from your OSX DVD
+2. Install Perl modules Mac::Applescript::Glue;
 	To install from CPAN in the default directory.
 	At the comand line enter:
 	sudo perl -MCPAN -e shell
@@ -98,6 +98,8 @@ Install Perl modules Mac::Applescript::Glue;
 	Eventually this completes successfully, or fails some of the tests..
 	If tests fail, you need to force the installation:
 	force install Mac::AppleScript::Glue
+
+General:
 
 1: Put iTunesUpdate directory (including subdirs) into the Plugins directory.
 On the Mac the plugin needs to be installed in 
