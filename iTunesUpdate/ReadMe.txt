@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.7.1: 5 October 2009
+	v2.8.3: 8 February 2011
 
 James Craig (james.craig@london.com)
 
@@ -145,6 +145,9 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.8.2  - fix infinite loop after applying bookmark
+v2.8.1  - ?
+v2.8.0  - ?
 v2.7.1  - replace durationSecs with secs
 ...
 v2.5.0  - Fix rating from Jive menu
