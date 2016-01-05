@@ -1,0 +1,92 @@
+[%- pagetitle = 'PLUGIN_ITUNES_UPDATER' | string; pageicon = 'SONGINFO' -%]
+[%- pwd_list = BLOCK -%]/
+	<a href="[% webroot %][% path %]?player=[% player | uri %]">
+		[% "PLUGIN_ITUNES_UPDATER" | string %]
+	</a>
+[% END -%]
+[%- pageHeaderInfo = BLOCK %]
+[% END -%]
+[%- PROCESS pageheader.html %]
+<!-- start plugins output -->
+<SCRIPT>
+<!--
+setTimeout("aReload()", [% refresh %] * 1000);
+
+function aReload() {
+  location.replace("index.html?player=[% player | uri %]");
+}
+-->
+</SCRIPT>
+[% IF playing == 'notfound' %]
+	[% 'PLUGIN_ITUNES_UPDATER_NOT_FOUND' | string %]
+[% ELSIF playing != 'true' %]  
+	[% 'PLUGIN_ITUNES_UPDATER_NO_TRACK' | string %]
+[% ELSE %]
+	<h3>[% "NOW_PLAYING" | string %]</h3>
+	[%- WRAPPER contentitem %]
+	<table>
+		<tr>
+			<td colspan="2"> <nobr><a href="/music/[% trackId | uri %]/cover.jpg"><img src="/music/[% trackId | uri %]/cover.jpg" alt="coverArt" onLoad="resize(this)"></a></td>
+		</tr>
+		<tr>
+			<td> <nobr> [% "TITLE" | string; "COLON" | string %] </nobr> </td>
+			<td> [% track | html %] </td>
+		</tr>
+		<tr>
+		<td>
+			<nobr>
+			[% 'PLUGIN_ITUNES_UPDATER_RATING' | string; 'COLON' | string %]
+			</nobr>
+		</td>
+		<td width="100%">
+				[% loop = 0 %]
+				[% WHILE loop < 100 %]
+					[% loop = loop + 20 %]
+					[% IF rating >= loop %]
+					<a href="index.html?player=[% player | uri %]&itu=rating&itu1=[% loop %]"><img src="[% webroot %]plugins/iTunesUpdate/html/images/star.gif" alt="[% loop %]" title="[% loop %]"></a>
+					[% ELSIF rating >= loop - 10 %]
+					<a href="index.html?player=[% player | uri %]&itu=rating&itu1=[% loop %]"><img src="[% webroot %]plugins/iTunesUpdate/html/images/half.gif" alt="[% loop %]" title="[% loop %]"></a>
+					[% ELSE %]
+					<a href="index.html?player=[% player | uri %]&itu=rating&itu1=[% loop %]"><img src="[% webroot %]plugins/iTunesUpdate/html/images/empty.gif" alt="[% loop %]" title="[% loop %]"></a>
+					[% END %]
+				[% END %]
+		</td>
+		<td><a href="index.html?player=[% player | uri %]&itu=rating&itu1=down"><img src="[% webroot %]plugins/iTunesUpdate/html/images/itu_down.gif" alt="Decrease Rating" title="Decrease Rating"></a></td>
+				<td><a href="index.html?player=[% player | uri %]&itu=rating&itu1=up"><img src="[% webroot %]plugins/iTunesUpdate/html/images/itu_up.gif" alt="Increase Rating" title="Increase Rating"></a></td>
+	</tr>
+	<tr>
+		<td> <nobr> [% "PLUGIN_ITUNES_UPDATER_PLAY_COUNT" | string; "COLON" | string %] </nobr> </td>
+		<td> [% playCount | html %] </td>
+	</tr>
+	<tr>
+		<td> <nobr> [% "PLUGIN_ITUNES_UPDATER_LAST_PLAYED" | string; "COLON" | string %] </nobr> </td>
+		<td> [% lastPlayed | html %] </td>
+	</tr>
+	<tr>
+		<td> <nobr> [% "PLUGIN_ITUNES_UPDATER_SKIP_COUNT" | string; "COLON" | string %] </nobr> </td>
+		<td> [% skipCount | html %] </td>
+	</tr>
+	<tr>
+		<td> <nobr> [% "PLUGIN_ITUNES_UPDATER_LAST_SKIPPED" | string; "COLON" | string %] </nobr> </td>
+		<td> [% lastSkip | html %] </td>
+	</tr>
+</table>
+[% END %]
+[% END %]
+
+[% IF save %]
+	<h3> 
+		<a href="index.html?player=[% player | uri %]&itu=saveplaylist">[% "PLUGIN_ITUNES_UPDATER_SAVE_PLAYLIST" | string %]</a>
+	</h3> 
+	[%- WRAPPER contentitem %]
+	<form name="saveplaylist" method="get" action="index.html">
+		Name: 	
+		<input type="hidden" name="player" value="[% player %]">
+		<input type="hidden" name="itu" value="saveplaylist">
+		<input type="text" class="stdedit" name="playlistname" size="50">
+		<input type="submit" value="Save"> 
+	</form>
+	[% END %]
+[% END %]
+<!-- end plugins output -->
+[% PROCESS pagefooter.html %]
