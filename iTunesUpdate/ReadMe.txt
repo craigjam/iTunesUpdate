@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.4.1 : 21st November 2007
+	v2.4.3: 19th December 2007
 
 James Craig (james.craig@london.com)
 
@@ -136,7 +136,7 @@ Daniel Boss for getting the plugin working on OSX
 
 Barcar for the half-star rating patch
 
-Greg Salton for testing iTunesUpdate.pl on OSX
+Greg Alton for testing iTunesUpdate.pl on OSX
 
 All SlimServer plugin writers for inspiration
 
@@ -144,6 +144,7 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.4.3  - Fix crash on Jive menu (currently not working)
 v2.4.2  - Fix version check in update script
 v2.4.1  - Fix bug saving unset rating to update file
 v2.4.0  - Jive menus added
@@ -156,7 +157,7 @@ v2.1.1	- note whether the user actually rated the track
 v2.1.0  - display iTunes downloaded album artwork on Windows/Direct Update
 	- fix some bugs in iTunesUpdate.pl courtesy of Ric Woodgate
 
-v2.0.0	- iTunesUpdate.pl replaces iTunesUpdateWin.pl after testing OSX functionality courtesy of Greg Salton
+v2.0.0	- iTunesUpdate.pl replaces iTunesUpdateWin.pl after testing OSX functionality courtesy of Greg Alton
 v1.9.2  - missing use POSIX in .pl script
 v1.9.1  - don't skip unless minimum threshold (5s) is passed. Increase min percent for play to 60.
 v1.9.0  - support for iTunes 7 skip features
