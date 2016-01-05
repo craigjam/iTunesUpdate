@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.4.0 : 4th November 2007
+	v2.4.1 : 21st November 2007
 
 James Craig (james.craig@london.com)
 
@@ -144,9 +144,10 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.4.1  - Fix bug saving unset rating to update file
 v2.4.0  - Jive menus added
         - fix ignore_filetype option for Mac
-v2.3.1  - bug fixes for 2.3.0
+v2.3.1  - bug fixes for 2.3.1
 v2.3.0  - Load artwork for all tracks added to playlists
 v2.2.0	- Upgrade for SqueezeCenter 7.0
 v2.1.2  - fix the ignore filetype option

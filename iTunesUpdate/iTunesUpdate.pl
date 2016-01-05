@@ -185,6 +185,8 @@ sub _logTrackToiTunes($%)
 				$trackHandle->set(skipped_date => \"date \"$newPlayedDate\"");
 			}
 
+		} else {
+			iTunesUpdateMsg("Unhandled combination? $action on $iTunesVersion!\n");
 		}
 		if ($data{rating} ne "") {
 			iTunesUpdateMsg("Updating rating in iTunes to $data{rating}\n");
