@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.2.0 : 28th September 2007
+	v2.3.1 : 27th October 2007
 
 James Craig (james.craig@london.com)
 
@@ -144,6 +144,8 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.3.1  - Artwork fixes for Jive
+v2.3.0  - Add artwork to SlimServer for all tracks added to current playlist
 v2.2.0	- Upgrade for SqueezeCenter 7.0
 v2.1.2  - fix the ignore filetype option
 v2.1.1	- note whether the user actually rated the track
