@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.6.0: 3 November 2008
+	v2.7.1: 5 October 2009
 
 James Craig (james.craig@london.com)
 
@@ -145,6 +145,8 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.7.1  - replace durationSecs with secs
+...
 v2.5.0  - Fix rating from Jive menu
 v2.4.5  - Fix rating skipped tracks from iTunesUpdate script`
 v2.4.4  - Jive menu added
