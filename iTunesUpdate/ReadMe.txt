@@ -144,6 +144,7 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.4.2  - Fix version check in update script
 v2.4.1  - Fix bug saving unset rating to update file
 v2.4.0  - Jive menus added
         - fix ignore_filetype option for Mac
