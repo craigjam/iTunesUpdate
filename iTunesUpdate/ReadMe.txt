@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.4.4: 9 March 2007
+	v2.5.0: 22 June 2008
 
 James Craig (james.craig@london.com)
 
@@ -140,6 +140,8 @@ Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.5.0  - Fix rating from Jive menu
+v2.4.5  - Fix rating skipped tracks from iTunesUpdate script`
 v2.4.4  - Jive menu added
 	- custom icon added
 	- fix on-screen messages
