@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.8.3: 8 February 2011
+	v2.9.0: 23 June 2013
 
 James Craig (james.craig@london.com)
 
@@ -88,20 +88,6 @@ Installation
 Windows Only: 
 If you wish to use 'direct access' mode, make sure that SlimServer is configured to 'start on login' from the SlimServer tray icon.
 
-Mac Only:
-1. Install 'Developer Tools' from your OSX DVD
-2. Install Perl modules Mac::Applescript::Glue;
-	To install from CPAN in the default directory.
-	At the comand line enter:
-	sudo perl -MCPAN -e shell
-	(it asks for your password)
-	You are then dropped into the CPAN shell.
-	install Mac::AppleScript::Glue
-	(This is case sensitive.)
-	Eventually this completes successfully, or fails some of the tests..
-	If tests fail, you need to force the installation:
-	force install Mac::AppleScript::Glue
-
 General:
 
 1: Put iTunesUpdate directory (including subdirs) into the Plugins directory.
@@ -139,12 +125,15 @@ Barcar for the half-star rating patch
 
 Greg Alton for testing iTunesUpdate.pl on OSX
 
+Charlie/Cosmotic for removing the Applescript::Glue requirement
+
 All SlimServer plugin writers for inspiration
 
 Anyone who's answered a question of mine on the SlimDevices mailing lists
 
 Versions
 ========
+v2.9.0  - remove AppleScript::Glue 
 v2.8.2  - fix infinite loop after applying bookmark
 v2.8.1  - ?
 v2.8.0  - ?

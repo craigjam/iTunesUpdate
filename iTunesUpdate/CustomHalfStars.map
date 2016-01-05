@@ -1,0 +1,13 @@
+[common]
+0.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_0
+1.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_1
+2.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_2
+3.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_3
+4.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_4
+5.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_5
+6.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_6
+7.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_7
+8.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_8
+9.hold			= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_9
+add.hold		= modefunction_PLUGIN.iTunesUpdate::Plugin->saveRating_9
+play.hold		= modefunction_PLUGIN.iTunesUpdate::Plugin->savePlaylistToiTunes
