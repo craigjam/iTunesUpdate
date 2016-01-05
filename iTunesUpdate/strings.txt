@@ -17,19 +17,19 @@ PLUGIN_ITUNES_UPDATER_HIT_PLAY_TO_STOP
 	EN	Hit play to stop iTunes Updates from this player...
 
 PLUGIN_ITUNES_UPDATER_RATING
-	EN	iTunes Rating
+	EN	Rating
 
 PLUGIN_ITUNES_UPDATER_LAST_PLAYED
-	EN	iTunes Last Played
+	EN	Last Played
 
 PLUGIN_ITUNES_UPDATER_PLAY_COUNT
-	EN	iTunes Play Count
+	EN	Play Count
 
 PLUGIN_ITUNES_UPDATER_LAST_SKIPPED
-	EN	iTunes Last Skipped
+	EN	Last Skipped
 
 PLUGIN_ITUNES_UPDATER_SKIP_COUNT
-	EN	iTunes Skip Count
+	EN	Skip Count
 
 PLUGIN_ITUNES_UPDATER_SAVE_PLAYLIST
 	EN	Save playlist to iTunes
@@ -66,3 +66,6 @@ PLUGIN_ITUNES_UPDATER_HALF_STAR_DESC
 
 PLUGIN_ITUNES_UPDATER_SET_ARTWORK
 	EN	Use iTunes downloaded album artwork in SlimServer
+
+PLUGIN_ITUNES_UPDATER_SAVEPLAYLIST_HELP
+	EN	Use the scroll wheel to change letters, then press the center button to select that letter. Press the center button again to save the playlist.
