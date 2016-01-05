@@ -21,11 +21,15 @@
 		<input type="checkbox" [% IF prefs.ignore_filetype %]checked [% END %] class="stdedit" name="ignore_filetype" id="ignore_filetype" />
 	</div>
 
-	</div>
 	<div class="settingSection">
 		<div class="prefHead">[% "PLUGIN_ITUNES_UPDATER_HALF_STAR" | string | upper %]</div>
 		<div class="prefDesc">[% "PLUGIN_ITUNES_UPDATER_HALF_STAR_DESC" | string %]</div>
 		<input type="checkbox" [% IF prefs.halfstar %]checked [% END %] class="stdedit" name="halfstar" id="halfstar" />
+	</div>
+
+	<div class="settingSection">
+		<div class="prefHead">[% "PLUGIN_ITUNES_UPDATER_USE_BOOKMARKS" | string | upper %]</div>
+		<input type="checkbox" [% IF prefs.bookmarks %]checked [% END %] class="stdedit" name="bookmarks" id="bookmarks" />
 	</div>
 
 [% PROCESS settings/footer.html %]

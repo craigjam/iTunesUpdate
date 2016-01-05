@@ -1,6 +1,6 @@
 "iTunes Update" SlimServer Plugin
 
-	v2.5.0: 22 June 2008
+	v2.6.0: 3 November 2008
 
 James Craig (james.craig@london.com)
 
@@ -47,6 +47,9 @@ While playing music navigate to the iTunes Update menu on your Squeezebox or Con
 
 * import iTunes Downloaded Artwork into SqueezeCentre (Windows only)
 As tracks are added to any SqueezeCentre player's current playlist, iTunes Update will copy any Downloaded Album artwork into SqueezeCentre. Artwork is saved for seven days.
+
+* apply iTunes bookmarks in SlimServer (experimental feature).
+With the bookmark option enabled in the iTunes Update settings, the plugin will apply bookmarks read from iTunes. For example if you have listened to 20 minutes of a 'bookmarkable' track in iTunes, then start listening to the same track in SlimServer, playback will start from the same point. When the track finishes, the bookmark in iTunes will be cleared.
 
 Notes
 =====

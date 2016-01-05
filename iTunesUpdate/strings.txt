@@ -67,5 +67,8 @@ PLUGIN_ITUNES_UPDATER_HALF_STAR_DESC
 PLUGIN_ITUNES_UPDATER_SET_ARTWORK
 	EN	Use iTunes downloaded album artwork in SlimServer
 
+PLUGIN_ITUNES_UPDATER_USE_BOOKMARKS
+	EN	Use iTunes track bookmarks in SlimServer
+
 PLUGIN_ITUNES_UPDATER_SAVEPLAYLIST_HELP
 	EN	Use the scroll wheel to change letters, then press the center button to select that letter. Press the center button again to save the playlist.
